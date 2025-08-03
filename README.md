@@ -1,24 +1,38 @@
-# lista-postow
+# Lista Postów
 
-## Project setup
-```
+Aplikacja Vue do zarządzania listą postów z API. Pozwala na przeglądanie, paginację, usuwanie oraz obsługę błędów.
+
+Link do projektu na vercel'u - [vue-lists-posts.vercel.app](https://vue-lists-posts.vercel.app)
+
+## Instalacja
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+## Uruchomienie aplikacji
+
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+Aplikacja będzie dostępna pod adresem: [http://localhost:8080](http://localhost:8080)
+
+## Budowanie na produkcję
+
+```bash
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Funkcje
+
+- Pobieranie i wyświetlanie postów z API
+- Paginacja
+- Usuwanie postów
+- Obsługa błędów
+- Responsywny interfejs (Tailwind CSS)
+
+## Konfiguracja
+
+Więcej informacji: [Configuration Reference](https://cli.vuejs.org/config/)
