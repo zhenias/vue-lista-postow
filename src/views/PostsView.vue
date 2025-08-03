@@ -24,9 +24,14 @@
             :post="post"
             @delete-post="handleDeletePost"
         />
+
+        <div v-if="!loading && paginatedPosts.length === 0" class="text-gray-500 py-4">
+          Brak postów do wyświetlenia.
+        </div>
       </div>
 
       <BasePagination
+          v-if="totalPages > 0"
           :current-page="currentPage"
           :total-pages="totalPages"
           @page-changed="changePage"
@@ -51,7 +56,9 @@ export default {
   methods: {
     ...mapActions('posts', ['loadUsers', 'loadPosts', 'removePost']),
     async handleDeletePost(postId) {
-      await this.removePost(postId);
+      if (confirm("Czy na pewno chcesz usunąć ten post?")) {
+        await this.removePost(postId);
+      }
     },
     changePage(page) {
       this.$store.commit('posts/SET_PAGE', page);
